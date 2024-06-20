@@ -1,4 +1,5 @@
 export enum ProdutoTipoEnum {
-  FISICO = 1,
-  DIGITAL = 2
+  // constante de sistema, usar caixa alta/MAIÚSCULO
+  FISICO = 1, // referenciando um produto físico
+  DIGITAL = 2 // referenciando um produto digital
 }

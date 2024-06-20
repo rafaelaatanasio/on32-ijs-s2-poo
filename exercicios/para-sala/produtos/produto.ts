@@ -1,7 +1,7 @@
 import { ProdutoTipoEnum } from "./enums/produto-tipo.enum";
 import { ProdutoInterface } from "./interfaces/produtos.interface";
 
-// verbosa - insiria as informacoes de forma granular
+// verbosa - insiria as informacoes de forma granular / aos poucos
 // abreviada - insere as informcoes direto
 /*
 export class Produto implements ProdutoInterface {
@@ -16,18 +16,20 @@ export class Produto implements ProdutoInterface {
   }
 }
 */
+
 /**
  * public -> qualquer um pode acessar filho, ou partir de uma variavel
  * proteced -> somente a classe e suas classes derivadas ( extends ) pode acessar
  * private -> somente a classe pode acessar
- *  private | proteced | public getStatus()
- *  private | proteced | public status
- *  readonly 
+ *  private | proteced | public getStatus() - método de status de um carrinho
+ *  private | proteced | public status - propriedade
+ *  readonly - apenas ler
  */
+
 export class Produto implements ProdutoInterface {
-  protected estoque: number = 0;
+  protected estoque: number = 0; // estava na variante
   public estaDisponivel(): boolean {
-    return this.estoque > 0
+    return this.estoque > 0 // mostrando que está disponível
   }
 
   public tipo: ProdutoTipoEnum = ProdutoTipoEnum.FISICO; 
@@ -35,7 +37,7 @@ export class Produto implements ProdutoInterface {
     return this._descricao
   }
   
-  // public get descricao: string são equivalentes, incrusive no constructor
+  // public get descricao: string são equivalentes, inclusive no constructor
 
   constructor(public nome: string, public preco: number, protected _descricao: string) {}
  }
