@@ -1,4 +1,5 @@
 /**
+ * - usando interface
  * validar tipagem
  * polifirsmo geralemente, mas quando precisamos da instancia, 
  * precisa de um mecanimso como type para identifcar

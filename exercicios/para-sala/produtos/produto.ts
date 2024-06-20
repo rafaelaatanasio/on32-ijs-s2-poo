@@ -28,12 +28,13 @@ export class Produto implements ProdutoInterface {
 
 export class Produto implements ProdutoInterface {
   protected estoque: number = 0; // estava na variante
-  public estaDisponivel(): boolean {
+  public estaDisponivel(): boolean { // método da classe mãe passando pra classe filha pra saber o estoque
     return this.estoque > 0 // mostrando que está disponível
   }
 
-  public tipo: ProdutoTipoEnum = ProdutoTipoEnum.FISICO; 
-  public get descricao(): string {
+  public tipo: ProdutoTipoEnum = ProdutoTipoEnum.FISICO; // tipo passado pra classe filha
+  public get descricao(): string { // método que não passa pra classe filha só pra pegar a descrição
+    console.log('Classe mãe')
     return this._descricao
   }
   

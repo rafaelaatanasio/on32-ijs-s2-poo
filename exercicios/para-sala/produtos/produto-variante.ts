@@ -16,6 +16,7 @@ export class ProdutoVariante extends Produto { // classe filha/derivada de Produ
 
   // mas sim, isso é um override = sobrescrita
   get descricao(): string { // método
+    console.log('Classe filha')
     return `
       O produto: ${this.nome}, com a cor ${this.cor} 
       com os tamnhos x, y, z 
