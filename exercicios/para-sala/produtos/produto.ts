@@ -27,7 +27,7 @@ export class Produto implements ProdutoInterface {
  */
 
 export class Produto implements ProdutoInterface {
-  protected estoque: number = 0; // estava na variante
+  estoque: number = 0; // estava na variante
   public estaDisponivel(): boolean { // método da classe mãe passando pra classe filha pra saber o estoque
     return this.estoque > 0 // mostrando que está disponível
   }
